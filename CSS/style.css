@@ -1,0 +1,127 @@
+.inline-block{
+    display: inline-block;
+    vertical-align: top;
+}
+.logo{
+    width: 23%;
+    padding: 1%;
+    text-align: left;
+    /*background-color:lightcoral;*/
+}
+nav{
+   width: 72.7%;
+   padding: 1%; 
+   /*background-color: darkgoldenrod;*/
+}
+nav ul{
+    width: 30%;
+    margin-left: auto;
+    text-align: right;
+    /*background-color: greenyellow;*/
+}
+.heroImg{
+    height: 400px;
+    padding: 25px;
+    /*background-color: aqua;*/
+}
+.content{
+    margin: 0 auto;
+    padding: 3%;
+    /*background-color: darkorange;*/
+    width: 500px;
+    height: 330px;
+    text-align:center;
+}
+.mySkills{
+    /*background-color: antiquewhite;*/
+}
+.flexContainer{
+    display: flex;
+    justify-content: space-around;
+    /*background-color: pink;*/
+}
+.flexContainer > div{
+    flex-basis: 33%;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    /*background-color: cadetblue;*/
+}
+.myWork h1{
+    text-align: center;
+    /*background-color: darkgoldenrod;*/
+}
+.workGrid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    /*background-color: coral;*/
+}
+.workGrid div {
+    padding: 2%;
+    /*background-color: whitesmoke;*/
+    /*border: 10px solid #000;*/
+}
+.workGrid > div:nth-child(1) {
+    grid-area: 1 / 2 / span 1 / span 1; /* Starting row, starting column, number of rows, number of columns */
+    /*background-color: blue;*/
+}
+.workGrid > div:nth-child(2) {
+    grid-area: 1 / 3 / span 1 / span 2;
+   /* background-color: aquamarine;*/
+}
+.workGrid > div:nth-child(3) {
+    grid-area: 2 / 2 / span 1 / span 1;
+    /*background-color: yellow;*/
+}
+.workGrid > div:nth-child(4) {
+    grid-area: 2 / 3 / span 1 / span 2;
+   /* background-color: green;*/
+}
+.workGrid h1 {
+    text-align: left;
+    background-color: crimson;
+}
+.workGrid h4{
+    text-align: left;
+}
+.workGrid p{
+    text-align: left;
+}
+.workGrid button{
+    width: 100px;
+}
+.myWork h3{
+    text-align: center;
+}
+footer{
+    background-color: #373738;
+    color: white;
+    padding: 10px;
+    }
+footer ul{
+    display: inline-block;
+    vertical-align: top;
+    /*background-color: darkseagreen;*/
+}
+footer li{
+    padding: 10px;
+}
+@media only screen and (max-width: 600px){
+    .flexContainer{
+        display: flex;
+        flex-direction: column;
+    }
+    .flexContainer > div{
+        width: 100%;
+    }
+    .workGrid{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: ".workGrid > div:nth-child(1)" ".workGrid > div:nth-child(2)" ".workGrid > div:nth-child(3)" ".workGrid > div:nth-child(4)"
+    }
+}
